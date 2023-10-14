@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  tipocambio.api.consulta:
+    image: ${DOCKER_REGISTRY-}tipocambioapiconsulta
+    build:
+      context: .
+      dockerfile: TipoCambio.api.consulta/Dockerfile
+networks:
+  default:
+    external:
+      name: microservicenet

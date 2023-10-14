@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  tipocambio.api.consulta:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Services__Tipocambio=http://tipocambio.api
+    ports:
+      - "6104:80"
